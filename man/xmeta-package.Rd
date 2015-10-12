@@ -38,12 +38,13 @@ Different estimators with and without the knowledge of within study correlation 
 
 \section{Publication bias}{Detecting and accounting for publication bias are challenging in MMA setting. The multivariate nature is often not fully accounted for by the existing univariate methods. 
 The score test for detecting publication bias in MMA when the within-study correlations are unknown is implemented in the function \code{\link{mpbt}}. 
+The Galaxy method for correcting publication bias in MMA is implemented in the function \code{\link{galaxy}}.
 }
 \author{
 Yong Chen \cr
 Chuan Hong \cr
 Haitao Chu \cr
-Maintainer: Chuan Hong <chuan.hong@uth.tmc.edu>
+Maintainer: Yong Chen <ychen.upenn@gmail.com>
 }
 
 \keyword{package}
