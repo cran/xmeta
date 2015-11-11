@@ -145,9 +145,8 @@ galaxy=function(data, rhow, type, method, k, L, estimator, side, maxiter){
       if (rho.sign<0){res_galaxy[2]=-res_galaxy[2]} 
       cov_galaxy=c(vcov(junk1), vcov(junk2))
     }
-    return(list(res_galaxy=res_galaxy, cov_galaxy=cov_galaxy, k0=k0, side=side))
+    return(list(res_galaxy=res_galaxy, cov_galaxy=cov_galaxy, k0=k0, side=side, method=method, type=type))
   }
-  
   
   if (missing(data)){data=NULL}
   if (is.null(data)){
@@ -189,13 +188,13 @@ galaxy=function(data, rhow, type, method, k, L, estimator, side, maxiter){
     
     if(method=="galaxy.cl"){
       res=galaxy.cl(y1, s1, y2, s2, L, estimator, side, maxiter)}
-      
   
     if ((method%in%c("galaxy.cl"))!=1){
       stop("The input method is not available for continuous data")
     }
 }
-res
+class(res) = c("galaxy")
+return(res)
 }
 
 

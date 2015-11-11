@@ -32,20 +32,10 @@ This is the first test for detecting publication bias in multivariate meta-analy
 }
 \author{Chuan Hong}
 
-
 \examples{
-library(mvmeta)
-y = matrix(0,8,2)
-S = inputcov(matrix(runif(8*2,0.1,2),8,2,dimnames=list(NULL,c("V1","V2"))),cor=c(0.5))
-Psi = inputcov(1:2,cor=0.3)
-mydat=mvmetaSim(y,S,Psi)
-y1=mydat[,1]
-y2=mydat[,2]
-s1=sqrt(S[,1])
-s2=sqrt(S[,3])
-
-data=data.frame(y1, s1, y2, s2)
-mpbt(data, method = "nn.cl", type = "continuous", k=2)
+data(prostate)
+fit.mpbt=mpbt(data=prostate, method = "nn.cl", type = "continuous", k=2)
+summary(fit.mpbt)
 }
 \keyword{Multivariate meta-analysis}
 \keyword{Publication bias}

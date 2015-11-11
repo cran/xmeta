@@ -2,7 +2,7 @@
 \alias{galaxy}
 \title{Correcting for publication bias of multivariate meta-analysis}
 \description{
-Correcting and correcting for publication bias of multivariate meta-analysis}
+Correcting for publication bias of multivariate meta-analysis}
 \usage{
 galaxy(data, rhow, type, method, k, L, estimator, side, maxiter)
 }
@@ -29,18 +29,10 @@ meta-analysis using the Galaxy method.}
 
 
 \examples{
-library(mvmeta)
-y = matrix(0,8,2)
-S = inputcov(matrix(runif(8*2,0.1,2),8,2,dimnames=list(NULL,c("V1","V2"))),cor=c(0.5))
-Psi = inputcov(1:2,cor=0.3)
-mydat=mvmetaSim(y,S,Psi)
-y1=mydat[,1]
-y2=mydat[,2]
-s1=sqrt(S[,1])
-s2=sqrt(S[,3])
-
-data=data.frame(y1, s1, y2, s2)
-galaxy(data, type = "continuous", method="galaxy.cl", k=2, L=1, estimator="R0", maxiter=150)
+data(prostate)
+fit.galaxy=galaxy(data=prostate, type = "continuous",
+  method="galaxy.cl", k=2, L=1, estimator="R0", maxiter=150)
+summary(fit.galaxy)
 }
 \keyword{Multivariate meta-analysis}
 \keyword{Publication bias}

@@ -15,7 +15,7 @@ mmeta(data, rhow, type, k, method)
 }
 \details{
 \bold{Inference on the multivariate random-effects meta-analysis for both continuous and binary outcomes}\cr
-The function can be used in meta-analyses with continous outcomes or binary outcomes (e.g., mean differences, diagnostic test results in diagnostic accuracy studies, the exposure status of both cases and controls in case-control studies and so on). 
+The function can be used in meta-analyses with continous outcomes and binary outcomes (e.g., mean differences, diagnostic test results in diagnostic accuracy studies, the exposure status of both cases and controls in case-control studies and so on). 
 Different estimators with and without the knowledge of within-study correlations are implemented in this function. The estimation methods include \cr
 \itemize{
   \item \bold{Restricted maximum likelihood for MMA with continuous outcomes}(nn.reml)
@@ -161,21 +161,20 @@ of the Royal Statistical Society: Series C (Applied Statistics) 64.3 (2015): 469
 
 Chen, Y., Liu, Y., Chu, H., Lee, M. and Schmid C. (2015). A simple and robust method for multivariate meta-analysis of diagnostic test accuracy, Statistics in Medicine (under revision). 
 }
-\author{Yong Chen}
+\author{Yong Chen, Yulun Liu}
 	
 \examples{
-library(mvmeta)
-y = matrix(0,8,2)
-S = inputcov(matrix(runif(8*2,0.1,2),8,2,dimnames=list(NULL,c("V1","V2"))),cor=c(0.5))
-Psi = inputcov(1:2,cor=0.3)
-mydat=mvmetaSim(y,S,Psi)
-y1=mydat[,1]
-y2=mydat[,2]
-s1=sqrt(S[,1])
-s2=sqrt(S[,3])
+data(prostate)
+fit.nn=mmeta(data=prostate, type="continuous", k=2, method="nn.cl") 
+summary(fit.nn)
 
-data=data.frame(y1, s1, y2, s2)
-mmeta(data, type="continuous", k=2, method="nn.cl") 
+data(nat2)
+fit.bb=mmeta(data=nat2, type="binary", k=2, method="bb.cl") 
+summary(fit.bb)
+
+data(ca125)
+fit.tb=mmeta(data=ca125, type="binary", k=2, method="tb.cl") 
+summary(fit.tb)
 }
 
 \keyword{random-effects}

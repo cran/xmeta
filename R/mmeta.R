@@ -5,10 +5,10 @@ mmeta <-
       function(y1, s1, y2, s2, rhow) {
         S=cbind(s1^2, rhow*s1*s2, s2^2)
         myreml= mvmeta(cbind(y1, y2), S, method="reml")
-        coef = coef(myreml)
+        coef = coef(myreml)[1,]
         vcov = vcov(myreml)
         rhob <- cov2cor(myreml$Psi)[2,1]    
-        myresults = list(beta = coef, beta.cov= vcov, rhob=rhob)
+        myresults = list(coefficients = coef, vcov= vcov, rhob=rhob)
         return(myresults)
       }
     
@@ -36,7 +36,7 @@ mmeta <-
         colnames(myV)=c("beta1", "tau1.2", "beta2", "tau2.2")
         rownames(myV)=c("beta1", "tau1.2", "beta2", "tau2.2")
         
-        myresults = list(beta = estim.pseudo, beta.cov= myV)
+        myresults = list(coefficients = estim.pseudo, vcov= myV)
         return(myresults)
       }
     
@@ -66,8 +66,8 @@ mmeta <-
       myV = matrix(c(var.beta1.hat,mycov.beta,mycov.beta,var.beta2.hat),nrow = 2, byrow = T)
       colnames(myV)=c("beta1", "beta2")
       rownames(myV)=c("beta1", "beta2")
-      result = list(beta=beta.hat,beta.cov=myV)
-      return(result)
+        myresults = list(coefficients = beta.hat, vcov= myV)
+        return(myresults)
     }
     
     
@@ -137,7 +137,7 @@ mmeta <-
       colnames(myV)=c("beta1", "log.tau1.2", "beta2", "log.tau2.2", "omega")
       rownames(myV)=c("beta1", "log.tau1.2", "beta2", "log.tau2.2", "omega")
       
-      return(list(beta=par, beta.cov=myV))
+      return(list(coefficients=par, vcov=myV))
     }
     
     
@@ -256,6 +256,7 @@ mmeta <-
       myVar.log <- as.numeric(myD %*% covar.sandwich %*% t(myD))
       logOR <- log((a2/b2)/(a1/b1))
       OR_CI=c(exp(logOR-1.96*sqrt(myVar.log)), exp(logOR+1.96*sqrt(myVar.log)))
+      #return(list(logOR=logOR, OR_CI=OR_CI, se=sqrt(myVar.log),hessian.log=hessian.log,conv=out$conv,mle=mle))
       return(list(logOR=logOR, OR_CI=OR_CI, se=sqrt(myVar.log),hessian.log=hessian.log,conv=out$conv,mle=mle))
     }
     
@@ -341,7 +342,7 @@ mmeta <-
       colnames(myV)=c("SeY", "SeY.S.2", "SpY", "SpY.S.2")
       rownames(myV)=c("SeY", "SeY.S.2", "SpY", "SpY.S.2")
       
-      return(list(beta=estim, par.orig=estim.orig, beta.cov=myV))
+      return(list(coefficients=estim, par.orig=estim.orig, vcov=myV))
     }
     
     
@@ -422,14 +423,14 @@ mmeta <-
       I22 = apply(I22.array, c(1,2), mean)
       return(list(I00=I00, I01=I01, I02=I02, I11=I11, I12=I12, I22=I22))
     }
-    
-    tb.cl=function(n, PiY, y1, n1, y2, n2){
-      m = length(y1) # the length of all study, including case control study & cohort study
+
+    tb.cl=function(n, PiY, SeY, n1, SpY, n2){
+      m = length(SeY) # the length of all study, including case control study & cohort study
       m2 = sum(is.na(PiY)!=1) # the length of the cohort study only
       
       estim = estim.orig = mbse.orig = matrix(NA,nrow=6,ncol=1)
       mySandwich = matrix(NA,nrow=6,ncol=6)
-      mydat1 = data.frame(n,PiY,n1,y1,n2, y2)
+      mydat1 = data.frame(n,PiY,n1,SeY,n2, SpY)
       names(mydat1) = c("n","PiY", "n1","SeY","n0","SpY")
       mydat2 = mydat1[is.na(mydat1$PiY)==FALSE, ] ## dataset used for estimating prevalence
       
@@ -479,7 +480,7 @@ mmeta <-
       s2.2.mbse = sqrt(diag(myV)[4])
       s3.2.mbse = sqrt(diag(myV)[6])
       mbse.orig = c(mu0.mbse, s1.2.mbse, mu1.mbse, s2.2.mbse, mu2.mbse, s3.2.mbse)
-      return(list(beta=estim, estim.orig=estim.orig, beta.cov=myV))
+      return(list(coefficients=estim, estim.orig=estim.orig, vcov=myV))
     }
     
     
@@ -570,7 +571,7 @@ mmeta <-
       colnames(myV)=c("PiY1", "PiY2", "SeY1", "SeY2", "SpY1", "SpY2")
       rownames(myV)=c("PiY1", "PiY2", "SeY1", "SeY2", "SpY1", "SpY2")
       
-      return(list(beta=estim, estim.orig=estim.orig, beta.cov=myV))
+      return(list(coefficients=estim, estim.orig=estim.orig, vcov=myV))
     }
     
     if (missing(data)){data=NULL}
@@ -643,10 +644,10 @@ if(type=="binary"){
     n=data$n
     PiY=data$PiY
     SeY=data$SeY
-    n2=data$n2
+    n1=data$n1
     SpY=data$SpY
-    n0=data$n0       
-    fit=tb.cl(n, PiY, SeY, n1, SpY, n0) 
+    n2=data$n2       
+    fit=tb.cl(n, PiY, SeY, n1, SpY, n2) 
   }
   if (method=="tn.cl"){
     n=data$n
@@ -664,6 +665,12 @@ if(type=="binary"){
          "bb.cl", "bn.cl", "tb.cl", or "tn.cl". ')
   }
   }
-result=list(beta=fit$beta, beta.cov=fit$beta.cov)
-return(result)
+
+res=list(type=type, k=k, method=method, coefficients=fit$coefficients, vcov=fit$vcov)
+if(method=="bb.cl"){
+res=list(type=type, k=k, method=method, logOR=fit$logOR, OR_CI=fit$OR_CI, se=fit$se,hessian.log=fit$hessian.log,conv=fit$conv,mle=fit$mle)
+}
+
+class(res) = c("mmeta")
+return(res)
 }

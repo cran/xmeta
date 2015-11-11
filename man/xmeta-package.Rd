@@ -13,7 +13,7 @@ The package \pkg{xmeta} consists of a collection of functions for making inferen
 Package: \tab xmeta\cr
 Type: \tab Package\cr
 Version: \tab 1.0\cr
-Date: \tab 2015-09-24\cr
+Date: \tab 2015-11-10\cr
 License: GPL>=2 \cr
 }
 }
@@ -27,7 +27,7 @@ Different estimators with and without the knowledge of within study correlation 
 \itemize{
   \item \bold{Restricted maximum likelihood for MMA with continuous outcomes} 
   \item \bold{Composite likelihood method for MMA with continuous outcomes} 
-  \item \bold{Moment of method for MMA with continuous outocmes} 
+  \item \bold{Method of moment for MMA with continuous outocmes} 
   \item \bold{Improved method for Riley model for MMA with continuous outcomes} 
   \item \bold{Marginal bivariate normal model for MMA with binary outcomes} 
   \item \bold{Marginal beta-binomial model for MMA with binary outcomes}

@@ -111,7 +111,8 @@ mpbt <-
   mylambda.sc=eigen(solve(I0.sc.inv.gg)%*%sigma.sc.gg)$values
   bar.lambda.sc=mean(mylambda.sc)
   sc.mb.a=sc.mb/bar.lambda.sc
-  return(list(mpbt.TS=sc.mb.a))
+  pv=pchisq(q=sc.mb.a, df=2, lower.tail=FALSE)
+  return(list(mpbt.TS=sc.mb.a, pv=pv))
 }
 
     if (missing(data)){data=NULL}
@@ -157,5 +158,7 @@ under development. ")
       }
     }  
 
-    fit
+    res=list(type=type, k=k, method=method, mpbt.TS=fit$mpbt.TS, mpbt.pv=fit$pv)
+    class(res) = c("mpbt")
+    return(res)
   }
