@@ -12,8 +12,8 @@ The package \pkg{xmeta} consists of a collection of functions for making inferen
 \tabular{ll}{
 Package: \tab xmeta\cr
 Type: \tab Package\cr
-Version: \tab 1.0\cr
-Date: \tab 2015-11-10\cr
+Version: \tab 1.1\cr
+Date: \tab 2016-11-10\cr
 License: GPL>=2 \cr
 }
 }
@@ -43,8 +43,8 @@ The Galaxy method for correcting publication bias in MMA is implemented in the f
 \author{
 Yong Chen \cr
 Chuan Hong \cr
-Haitao Chu \cr
 Maintainer: Yong Chen <ychen.upenn@gmail.com>
+Contributor: Haitao Chu, Yulun Liu
 }
 
 \keyword{package}
