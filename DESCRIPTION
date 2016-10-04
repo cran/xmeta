@@ -1,19 +1,19 @@
 Package: xmeta
 Type: Package
 Title: A Toolbox for Multivariate Meta-Analysis
-Version: 1.1-1
-Date: 2016-11-10
+Version: 1.1-2
+Date: 2016-10-04
 Authors@R: c(person("Yong", "Chen", role=c("aut", "cre"),
                      email ="ychen.upenn@gmail.com"),
 		     person("Chuan", "Hong", role="aut"),
 			 person("Haitao", "Chu", role="ctb"),
 			 person("Yulun", "Liu", role="ctb"))
 Imports: aod, glmmML, numDeriv, metafor, mvmeta, stats
-Description: A toolbox for meta-analysis. This package includes a collection of functions for (1) implementing robust multivariate meta-analysis of continuous or binary outcomes; and (2) testing and correcting of publication bias in multivariate meta-analysis settings.
+Description: A toolbox for meta-analysis. This package includes a collection of functions for (1) implementing robust multivariate meta-analysis of continuous or binary outcomes; and (2) a bivariate Egger's test for detecting publication bias.
 Depends: R (>= 3.0.0)
 License: GPL (>= 2)
 LazyLoad: no
-Packaged: 2016-06-11 04:56:14 UTC; YYAFZ
+Packaged: 2016-10-04 15:20:48 UTC; ch263
 Author: Yong Chen [aut, cre],
   Chuan Hong [aut],
   Haitao Chu [ctb],
@@ -21,4 +21,4 @@ Author: Yong Chen [aut, cre],
 Maintainer: Yong Chen <ychen.upenn@gmail.com>
 NeedsCompilation: no
 Repository: CRAN
-Date/Publication: 2016-06-11 09:25:57
+Date/Publication: 2016-10-04 17:42:20

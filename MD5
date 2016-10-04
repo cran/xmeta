@@ -1,4 +1,4 @@
-e59f32c3e73d1b834660bfbff048cb11 *DESCRIPTION
+026fd39df1175a9fc571c19d473043f3 *DESCRIPTION
 68a0b2afe8064fe6f8309b64fcaff208 *NAMESPACE
 23a33a3b848f34e97248070ad03634af *R/galaxy.R
 58d01e5ba726fd84998b45bdf3ce3a08 *R/mmeta.R
@@ -18,4 +18,4 @@ df10db8f9f435b7ecb469b98c059ec68 *man/nat2.Rd
 8d7fa2438b8be6e59e427e4475ae675a *man/summary.galaxy.rd
 6b3f97887f710e44fd0af21f04289078 *man/summary.mmeta.rd
 c1c524d93850ea4533ebca799f60cfc0 *man/summary.mpbt.rd
-b9749dc91f89a430327cae57475a4e22 *man/xmeta-package.Rd
+94d92946d1cec83362df9cd27cdc1575 *man/xmeta-package.Rd
