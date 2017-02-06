@@ -43,7 +43,7 @@ The Galaxy method for correcting publication bias in MMA is implemented in the f
 \author{
 Yong Chen \cr
 Chuan Hong \cr
-Maintainer: Yong Chen <ychen.upenn@gmail.com>
+Maintainer: Yong Chen <ychen123@upenn.edu>
 Contributor: Haitao Chu, Yulun Liu
 }
 
