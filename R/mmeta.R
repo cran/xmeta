@@ -5,7 +5,7 @@ mmeta <-
       function(y1, s1, y2, s2, rhow) {
         S=cbind(s1^2, rhow*s1*s2, s2^2)
         myreml= mvmeta(cbind(y1, y2), S, method="reml")
-        coef = coef(myreml)[1,]
+        coef = coef(myreml)
         vcov = vcov(myreml)
         rhob <- cov2cor(myreml$Psi)[2,1]    
         myresults = list(coefficients = coef, vcov= vcov, rhob=rhob)

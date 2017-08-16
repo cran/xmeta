@@ -1,7 +1,7 @@
-4bfe7b67210323adc734ba5fa14671a1 *DESCRIPTION
+ee19617a65619a53e7e488502341d301 *DESCRIPTION
 68a0b2afe8064fe6f8309b64fcaff208 *NAMESPACE
 23a33a3b848f34e97248070ad03634af *R/galaxy.R
-58d01e5ba726fd84998b45bdf3ce3a08 *R/mmeta.R
+6ff1a562ad93054fca9cee9d8e54ed9a *R/mmeta.R
 99337db3ca77096cc808e8fbad5a91f9 *R/mpbt.R
 1973b4112dcb7b3198c30f9ec900c949 *R/summary.galaxy.R
 9bd289a324031c3f5f06140cf5dc1f19 *R/summary.mmeta.R
@@ -11,11 +11,11 @@ ad09986c4b11eb819d8df106c2696290 *R/summary.mpbt.R
 f5f95ca711ce44f54878826244abba59 *data/prostate.rda
 137c72aec8ec92d2f6adf78151476cbf *man/ca125.Rd
 d1baac92f519fe19eaab727d78d17898 *man/galaxy.Rd
-8604d9803541db30c65e6faeec783c4f *man/mmeta.Rd
+5aed4a41cc8b551071303e3ed019ee5e *man/mmeta.Rd
 3e53007acc08dda21ba0bc967a2ba94c *man/mpbt.Rd
 df10db8f9f435b7ecb469b98c059ec68 *man/nat2.Rd
 382f5d3f8e045d9b12cd70235167e85e *man/prostate.Rd
 8d7fa2438b8be6e59e427e4475ae675a *man/summary.galaxy.rd
 6b3f97887f710e44fd0af21f04289078 *man/summary.mmeta.rd
 c1c524d93850ea4533ebca799f60cfc0 *man/summary.mpbt.rd
-4cdd77f562f47bac1a821a3f65d209e7 *man/xmeta-package.Rd
+bfa3887c1f5c3512df4431b0610bc772 *man/xmeta-package.Rd

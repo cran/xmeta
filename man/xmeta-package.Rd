@@ -13,7 +13,7 @@ The package \pkg{xmeta} consists of a collection of functions for making inferen
 Package: \tab xmeta\cr
 Type: \tab Package\cr
 Version: \tab 1.1\cr
-Date: \tab 2016-10-04\cr
+Date: \tab 2017-5-12\cr
 License: GPL>=2 \cr
 }
 }
