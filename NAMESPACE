@@ -8,5 +8,4 @@ importFrom(stats, pchisq, coef, cov, cor, vcov, cov2cor, dbinom, integrate, na.o
 
 
 S3method(summary, mmeta)
-S3method(summary, mpbt)
-S3method(summary, galaxy) 
+S3method(summary, msset)

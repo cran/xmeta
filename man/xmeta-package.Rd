@@ -13,7 +13,7 @@ The package \pkg{xmeta} consists of a collection of functions for making inferen
 Package: \tab xmeta\cr
 Type: \tab Package\cr
 Version: \tab 1.1\cr
-Date: \tab 2017-5-12\cr
+Date: \tab 2019-10-30\cr
 License: GPL>=2 \cr
 }
 }
@@ -36,9 +36,8 @@ Different estimators with and without the knowledge of within study correlation 
 }
 }
 
-\section{Publication bias}{Detecting and accounting for publication bias are challenging in MMA setting. The multivariate nature is often not fully accounted for by the existing univariate methods. 
-The score test for detecting publication bias in MMA when the within-study correlations are unknown is implemented in the function \code{\link{mpbt}}. 
-The Galaxy method for correcting publication bias in MMA is implemented in the function \code{\link{galaxy}}.
+\section{Small study effects}{Detecting and accounting for small study effects are challenging in MMA setting. The multivariate nature is often not fully accounted for by the existing univariate methods. 
+The score test for detecting small study effects in MMA when the within-study correlations are unknown is implemented in the function \code{\link{msset}}. 
 }
 \author{
 Yong Chen \cr
