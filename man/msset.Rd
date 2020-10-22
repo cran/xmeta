@@ -2,7 +2,7 @@
 \alias{msset}
 \title{Testing and correcting for small study effects of multivariate meta-analysis}
 \description{
-Testing and correcting for small study effects of multivariate meta-analysis}
+Testing and correcting for small study effects of multivariate meta-analysis.}
 \usage{
 msset(data, nm.y1, nm.s1, nm.y2, nm.s2, method, type, k)
 }
