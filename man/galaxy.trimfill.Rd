@@ -75,7 +75,8 @@ The bivariate T&F method assumes studies are suppressed based on a weighted sum 
           and (c_1, c_2) = (cos(a_m), sin(a_m)), m=1,...,M.
 }
 \examples{
-\dontrun{ 
+ 
+\dontrun{
 require(MASS)
 require(mvmeta)
 require(metafor)

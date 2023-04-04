@@ -38,8 +38,8 @@
 #'          
 #' @references Luo C, Marks-Anglin AK, Duan R, Lin L, Hong C, Chu H, Chen Y. Accounting for small-study effects 
 #'                using a bivariate trim and fill meta-analysis procedure. medRxiv. 2020 Jan 1.
-#' @examples 
-#' \dontrun{ 
+#' @examples  
+#' \dontrun{
 #' require(MASS)
 #' require(mvmeta)
 #' require(metafor)

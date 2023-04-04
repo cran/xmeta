@@ -60,7 +60,7 @@ For simplicity of notation, denote \eqn{\bf{Y_i}=(Y_{i1}, Y_{i2})^{T}}, \eqn{{{\
 The restricted likelihood of \eqn{(\eta_1, \eta_2, \rho_{\textrm{B}})} can be written as
 \deqn{
 \log L({{\eta}}_1, {{\eta}}_2, \rho_{\textrm{B}})
-=-{1\over 2} \left[\log \left( \Big{|}\sum_{i=1}^m \bf{V_i}^{-1}\Big{|}\right)+ \sum_{i=1}^m\left\{ \log |\bf{V_i}| + (\bf{Y_i}-{{\beta}})^T \bf{V_i}^{-1} (\bf{Y_i}-{{\beta}}) \right\}\right].
+=-{1\over 2} \left[ \log \left( \Bigl| \sum_{i=1}^m \bf{V_i}^{-1}\Bigr| \right)+ \sum_{i=1}^m\left\{ \log |\bf{V_i}| + (\bf{Y_i}-{{\beta}})^T \bf{V_i}^{-1} (\bf{Y_i}-{{\beta}}) \right\}\right].
 }
 The parameters \eqn{(\eta_1, \eta_2, \rho_{\textrm{B}})} can be estimated by the restricted maximum likelihood (REML) approach as described in Van Houwelingen et al. (2002). The REML method for 
 MMA is specified via \code{method} argument (\code{method="nn.reml"}). 

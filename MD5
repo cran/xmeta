@@ -1,7 +1,7 @@
-52e60fda54ec4114c3ff184c9243ce6b *DESCRIPTION
+a88a4feff3c98bc4795a473577f7d420 *DESCRIPTION
 6799791ad4ff4f141e5fb0224243cdd3 *NAMESPACE
 8e6da652caf3420e45a2fbd4bec205f2 *R/galaxy.R
-806932bea8b2d5df4f1443e09ddca7a4 *R/galaxy.trimfill.R
+1b4947374c1700348e13387a94a893ed *R/galaxy.trimfill.R
 bbe0295574c037883c22328df26d8e25 *R/mmeta.R
 2f0d29bdd3e90766a1079de603f79e46 *R/msset.R
 9bd289a324031c3f5f06140cf5dc1f19 *R/summary.mmeta.R
@@ -13,8 +13,8 @@ f5f95ca711ce44f54878826244abba59 *data/prostate.rda
 6ba98e7f29c9f524941732e015333182 *man/ca125.Rd
 9695dfc67edd4db7705f24c7844d1ac6 *man/dat.gen.Rd
 ebae9877e3e9dabefcc0deae975968d8 *man/galaxy.Rd
-b8c213c01ccce9dca30211170cde8e41 *man/galaxy.trimfill.Rd
-c5c11236ae39c255b549b0dc46eec964 *man/mmeta.Rd
+ec948da13d1c4534da56ad2ed2218545 *man/galaxy.trimfill.Rd
+9427974aa41e05ddfd55b75dfb4eb1c5 *man/mmeta.Rd
 1baf2a0ca38d10a6eb4a289985031611 *man/msset.Rd
 df10db8f9f435b7ecb469b98c059ec68 *man/nat2.Rd
 382f5d3f8e045d9b12cd70235167e85e *man/prostate.Rd
