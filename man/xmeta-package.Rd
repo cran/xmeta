@@ -8,15 +8,6 @@ A Tool Box for Multivariate Meta-Analysis
 \description{
 The package \pkg{xmeta} consists of a collection of functions for making inference and detecting publication bias in multivariate meta-analysis (MMA).
 }
-\details{
-\tabular{ll}{
-Package: \tab xmeta\cr
-Type: \tab Package\cr
-Version: \tab 1.3-0\cr
-Date: \tab 2021-01-31\cr
-License: GPL>=2 \cr
-}
-}
 
 \section{Inference}{The aim of the estimation methods is to estimate the coefficients 
 \eqn{\boldsymbol{\beta}}{\beta} and the components of the between-study (co)variance matrix \eqn{\boldsymbol{\Psi}}{\Psi} 
@@ -49,15 +40,9 @@ by separate funnel plots for each outcome while elucidating more complex feature
 may only be revealed by examining the joint distribution of the bivariate outcomes.
 }
 
-\section{Publication bias in bivariate meta-analysis}{The function \code{\link{galaxy.trimfill}} implements a bivariate T&F method accounting for publication bias in bivariate meta-analysis, based on symmetry of the galaxy plot. The bivariate T&F method assumes studies are suppressed based on a weighted sum of the two outcomes. 
+\section{Publication bias in bivariate meta-analysis}{The function \code{galaxy.trimfill} implements a bivariate T&F method accounting for publication bias in bivariate meta-analysis, based on symmetry of the galaxy plot. The bivariate T&F method assumes studies are suppressed based on a weighted sum of the two outcomes. 
 We use a searching algorithm to find the optimal direction which gives the most trimmed studies. This is based on the observation that the closer a direction is 
 to the truth, the more studies are expected to be trimmed along that direction.   
-}
-
-\author{
-Author: Chuan Hong, Chongliang Luo, Jiayi Tong, Yong Chen
-Maintainer: Jiayi Tong <Jiayi.Tong@pennmedicine.upenn.edu>
-Contributor: Rui Duan, Haitao Chu, Yulun Liu 
 }
 
 \keyword{package}

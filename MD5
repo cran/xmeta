@@ -1,11 +1,11 @@
-a88a4feff3c98bc4795a473577f7d420 *DESCRIPTION
-6799791ad4ff4f141e5fb0224243cdd3 *NAMESPACE
+d2e014e7a70302e51cd1bc66e3bc20c4 *DESCRIPTION
+90b83939ff61e6a82626929b886f172f *NAMESPACE
 8e6da652caf3420e45a2fbd4bec205f2 *R/galaxy.R
-1b4947374c1700348e13387a94a893ed *R/galaxy.trimfill.R
+09166c02c351d8239142a6ba85ecb338 *R/galaxy.trimfill.R
 bbe0295574c037883c22328df26d8e25 *R/mmeta.R
 2f0d29bdd3e90766a1079de603f79e46 *R/msset.R
 9bd289a324031c3f5f06140cf5dc1f19 *R/summary.mmeta.R
-444284e1da6ff46e2be0a5c3fdfe7f87 *R/summary.msset.R
+3ad7ba52ec34feb1f2aa7a827a6e0117 *R/summary.msset.R
 165b82642bcc16dd90da0bf1661e6e28 *data/ca125.rda
 20e354ffb14aa7081331a8afa66c9d4c *data/nat2.rda
 f5f95ca711ce44f54878826244abba59 *data/prostate.rda
@@ -21,5 +21,5 @@ df10db8f9f435b7ecb469b98c059ec68 *man/nat2.Rd
 0be4e708cf42f0e6f5b55492285f908d *man/sim_dat.Rd
 ffd511d4a7c14eb36cd913c7dcb07ba3 *man/summary.mmeta.rd
 78d7f3cdf96ab033b94693d46fbf1107 *man/summary.msset.rd
-10e4878d516c2ba9d23b97409eea8c33 *man/trimfill.rma.Rd
-f80956c361f8024327897af3ca93c6d8 *man/xmeta-package.Rd
+c0303569ae316a5609a27354a16bac17 *man/trimfill_rma.Rd
+3172b3feca528eb8d08d27850d7528a7 *man/xmeta-package.Rd

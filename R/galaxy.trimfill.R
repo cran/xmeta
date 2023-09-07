@@ -67,8 +67,8 @@
 #' ## univariate T&F based on y1 or y2
 #' y1.rma <- rma(y1, v1, method='FE')
 #' y2.rma <- rma(y2, v2, method='FE')
-#' y1.tf <- trimfill.rma(y1.rma, estimator = estimator, method.fill = 'DL') 
-#' y2.tf <- trimfill.rma(y2.rma, estimator = estimator, method.fill = 'DL') 
+#' y1.tf <- trimfill_rma(y1.rma, estimator = estimator, method.fill = 'DL') 
+#' y2.tf <- trimfill_rma(y2.rma, estimator = estimator, method.fill = 'DL') 
 #' c(y1.tf$beta, y2.tf$beta)
 #' # 2.122231 2.181333
 #' c(y1.tf$k0, y2.tf$k0)
@@ -143,7 +143,7 @@ galaxy.trimfill <- function(y1, v1, y2, v2, n.grid = 12, angle, estimator, side,
     # cat(ig, rma.grid$beta, '\n')
     res[ig, 1:2] <- c(y.center) * c(cos(theta), sin(theta))  # c(rma.grid$beta)
     # LC.center <- sum( y.center * c(cos(theta), sin(theta)) )
-    tf.grid <- trimfill.rma(rma.grid, side=side, estimator=estimator, maxiter=maxiter)
+    tf.grid <- trimfill_rma(rma.grid, side=side, estimator=estimator, maxiter=maxiter)
     res[ig, 5:6] <- c(tf.grid$k0, tf.grid$se.k0)
     # fill studies symmetric to the trimmed studies
     if(tf.grid$k0 > 0){
@@ -203,7 +203,7 @@ galaxy.trimfill <- function(y1, v1, y2, v2, n.grid = 12, angle, estimator, side,
 #' @details  It is recommend using fixed-effects for method.trim and random-effects for method.fill when heterogeneity exists.
 #'          
 #' @export
-trimfill.rma <- function (x, side, estimator = "L0", maxiter = 100, method.trim=NULL, 
+trimfill_rma <- function(x, side, estimator = "L0", maxiter = 100, method.trim=NULL, 
                           method.fill=NULL,verbose = FALSE, ilim) {
   if(is.null(method.trim)) method.trim <- x$method
   if(is.null(method.fill)) method.fill <- x$method
@@ -338,7 +338,6 @@ trimfill.rma <- function (x, side, estimator = "L0", maxiter = 100, method.trim=
   class(res) <- c("rma.uni.trimfill", class(res))
   return( res) 
 }
-
  
 
 

@@ -13,5 +13,11 @@ importFrom("stats", "rnorm", "runif", "quantile")
 importFrom("MASS", "mvrnorm")
 importFrom("metafor", "rma.uni") 
 
+export(dat.gen)
+export(galaxy)
+export(galaxy.trimfill)
+export(trimfill_rma)
+
 S3method(summary, mmeta)
 S3method(summary, msset)
+
